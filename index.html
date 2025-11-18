@@ -1,5 +1,5 @@
 <script type="module">
-import pdfjsDist from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.394/+esm'
+import pdfjsDist from 'https://cdn.jsdelivr.net/npm/pdfjs-dist/+esm'
 </script>
 
 <script type="module">
@@ -11,7 +11,7 @@ import pdfjsDist from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.394/+esm'
   var { pdfjsLib } = globalThis;
 
   // The workerSrc property shall be specified.
-  pdfjsLib.GlobalWorkerOptions.workerSrc = '//mozilla.github.io/pdf.js/build/pdf.worker.mjs';
+  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/npm/pdfjs-dist/wasm/openjpeg_nowasm_fallback.min.js';
 
   // Asynchronous download of PDF
   var loadingTask = pdfjsLib.getDocument(url);
@@ -47,6 +47,8 @@ import pdfjsDist from 'https://cdn.jsdelivr.net/npm/pdfjs-dist@5.4.394/+esm'
     console.error(reason);
   });
 </script>
+
+<link href="https://cdn.jsdelivr.net/npm/pdfjs-dist/web/pdf_viewer.min.css" rel="stylesheet">
 
 <h1>TESTING!</h1>
 
